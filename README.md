@@ -1,15 +1,17 @@
-Welcome to your new dbt project!
-
-### Using the starter project
-
-Try running the following commands:
-- dbt run
-- dbt test
 
 
-### Resources:
-- Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
-- Check out [Discourse](https://discourse.getdbt.com/) for commonly asked questions and answers
-- Join the [chat](https://community.getdbt.com/) on Slack for live discussions and support
-- Find [dbt events](https://events.getdbt.com) near you
-- Check out [the blog](https://blog.getdbt.com/) for the latest news on dbt's development and best practices
+# Play Perfect - user_panel 
+
+## Project Descrition:
+### This project include 2 parts:
+1. **Pipeline**: 
+    a. dbt modeling data, described in ![user_panel modeling graph](modeling user_panel.PNG)
+    b. data loading  python script:  load user_panel table to indexed Postgresql table (deployed on GCP) for efficient fetching 
+2. **Api-Service**: Web api Expose GetAttribute by player Id, using FastApi web framework and psycopg2 to interact with Postgresql
+
+
+
+
+
+
+
