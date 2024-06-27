@@ -13,8 +13,7 @@ Also, provide an API service, that expose GetAttribute to client,with an emphasi
    
     **A.** DBT modeling data, each desired attribute is a stage/view. A join of all stages forms the desired user-panel table as described on the following graph: ![model graph](/user_panel_graph.PNG)
     
-    **B.** data loading python script:  load user_panel table into indexed Postgresql table (deployed on GCP) for efficient fetching 
-
+    **B.** data loading python script:  <ins>Load user_panel table into indexed Postgresql table</ins> (deployed on GCP) for efficient fetching 
 
 2. **Api-Service**: Web api Expose GetAttribute by player Id, using FastApi web framework and psycopg2 Connection Pool supporting multiple paralel requests to interact with Postgresql
 
