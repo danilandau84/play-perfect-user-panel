@@ -35,7 +35,7 @@ Also, provide an API service, that expose GetAttribute to client,with an emphasi
 **Api Service:**
  1.  python api-service.py
  
- _profile.yml .env and  service_account file will be delivered separately _
+ _profile.yml .env and  service_account files will be delivered separately_
 
 
 
