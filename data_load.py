@@ -1,7 +1,9 @@
 import os
+import psycopg2
+import datetime
 from google.cloud import bigquery
 from google.oauth2 import service_account 
-import psycopg2
+
 from sqlalchemy import create_engine
 from dotenv import load_dotenv
 
@@ -63,11 +65,13 @@ def main():
     postgres_table_name = 'user_panel'
     postgres_conn = os.getenv("POSTGRES_CONN")
 
-
+    print(datetime.datetime.now(),"Fetching data from bigquery...")
     df = fetch_data_from_bigquery(project_id, dataset_id, table_id)
+    print(datetime.datetime.now(),"Rebuild indexed relational table...")
     reset_target_table(postgres_conn)
+    print(datetime.datetime.now(),"Inserting data into table...")
     insert_data_to_postgresql(df,postgres_conn, postgres_table_name)
 
 if __name__ == "__main__":
     main()
-    print("FINISH")
+    print(datetime.datetime.now(),"LOAD FINISH ")
