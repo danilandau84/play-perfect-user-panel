@@ -2,7 +2,7 @@
 
 # Play Perfect - user_panel 
 
-### Project Descrition:
+### Project Description:
 
 This project proccess and tranform user's data by modeling big query raw data table.
 Also, provide an API service, that expose GetAttribute to client,with an emphasis on efficiency.
